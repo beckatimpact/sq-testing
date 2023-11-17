@@ -8,11 +8,11 @@ squatch.ready(function () {
 
   squatch.api().squatchReferralCookie().then(function(response) {
 
-    // Retrieve the full list of codes
-    var codesList = Object.values(response.codes);
-    if(codesList.length > 0){
-       document.getElementById('referralCodes').value = codesList.join(", ");
-    }
+    // // Retrieve the full list of codes
+    // var codesList = Object.values(response.codes);
+    // if(codesList.length > 0){
+    //    document.getElementById('referralCodes').value = codesList.join(", ");
+    // }
 
     // Heirarchy -- will use `example-program` as default or `secondary-program` if no cookie is found for the former
     document.getElementById('referralCode').value = response.codes['example-program'] || response.codes['secondary-program']; 
